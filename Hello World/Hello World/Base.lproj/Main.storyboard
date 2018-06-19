@@ -709,20 +709,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IbY-wI-i7G">
+                                <rect key="frame" x="90" y="190" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="blP-2n-eKU"/>
+                                    <constraint firstAttribute="height" constant="30" id="sE1-QC-uak"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="iE4-T2-VJu">
+                                    <font key="font" metaFont="system" size="18"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="07a-xV-plR">
+                                <rect key="frame" x="194" y="128" width="92" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Tal-Ag-DAV"/>
+                                    <constraint firstAttribute="height" constant="30" id="pYA-So-4kC"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Click me" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3py-0q-EfU">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="clickMeDidTapped:" target="XfG-lQ-9wD" id="2iD-su-DxY"/>
+                                </connections>
+                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eJY-7b-ux3">
-                                <rect key="frame" x="181" y="121" width="118" height="27"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Hello World" id="OKK-1l-efi">
+                                <rect key="frame" x="88" y="50" width="304" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="i2T-tN-033"/>
+                                    <constraint firstAttribute="height" constant="30" id="pkV-Nu-7ea"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="OKK-1l-efi">
                                     <font key="font" metaFont="system" size="22"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="eJY-7b-ux3" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="7FE-ln-3Qv"/>
-                            <constraint firstItem="eJY-7b-ux3" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="VKK-kG-GRl"/>
+                            <constraint firstItem="07a-xV-plR" firstAttribute="top" secondItem="IbY-wI-i7G" secondAttribute="bottom" constant="25" id="3YX-47-LiR"/>
+                            <constraint firstItem="eJY-7b-ux3" firstAttribute="top" secondItem="07a-xV-plR" secondAttribute="bottom" constant="55" id="4NE-KT-brg"/>
+                            <constraint firstItem="IbY-wI-i7G" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="50" id="XQI-SX-J1D"/>
+                            <constraint firstItem="IbY-wI-i7G" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="hD7-dE-3gc"/>
+                            <constraint firstItem="07a-xV-plR" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="l6g-aO-Mcy"/>
+                            <constraint firstItem="eJY-7b-ux3" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="pv7-Kz-sMr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="helloLabel" destination="eJY-7b-ux3" id="qC6-mB-lEd"/>
+                        <outlet property="nameTextField" destination="IbY-wI-i7G" id="isl-Ik-pfE"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

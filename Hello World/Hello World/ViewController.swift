@@ -9,12 +9,24 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
+    
+    @IBOutlet weak var nameTextField: NSTextField!
+    @IBOutlet weak var helloLabel: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func clickMeDidTapped(_ sender: Any) {
+        if nameTextField.stringValue != "" {
+            helloLabel.stringValue = nameTextField.stringValue
+        } else {
+            helloLabel.stringValue = "Hello World!"
+        }
+    }
+    
 
     override var representedObject: Any? {
         didSet {
