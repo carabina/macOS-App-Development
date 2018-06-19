@@ -9,9 +9,13 @@ A Collection of macOS projects which are written in Swift Programming Language.
 <img src="osx.jpg" alt="Screenshot of OS X" />
 </h3>
 
+## Projects
+
+* [Hello World](https://github.com/vinothvino42/macOS-App-Development/tree/master/Hello%20World)
+
 ## Compatibility
 
-This project is written in Swift 4 and requires Xcode 9.1 to build and run.
+These projects are written in Swift 4 and requires Xcode 9.1 to build and run.
 
 ## Author
 
